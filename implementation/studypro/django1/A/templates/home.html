@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+<div class="card">
+{% for todo in todos %}
+<a class="card-body" href="{% url 'details' todo.id %}">{{ todo.title }} </a>
+{% endfor %}
+</div>
+
+#convert titles to links that you can click on to go to another web page
+{% endblock %}
+

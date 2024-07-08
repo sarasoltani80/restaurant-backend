@@ -1,0 +1,56 @@
+
+
+<div class="menu-box">
+		<div class="container">
+            <h2>you can choose this tables</h2>
+			<div class="row special-list">
+				{% for tb in tables %}
+				<a href="#">
+				   <div>
+					<div class="gallery-single fix">
+						<img src="{{tb.photo.url}}" width="200" height="200" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>{{tb.location}}</h4>
+							<p>{{tb.category}}</p>
+							<p>{{tb.chairsnumber}}</p>
+							<button>
+								<a href="{% url 'updatetable' user.id tb.id %}">Choose</a>
+							</button>
+						</div>
+					</div>
+				</div>
+				</a>
+				{% endfor %}
+
+			</div>
+		</div>
+
+	 <div class="container">
+            <h2>UnPaid Items</h2>
+			<div class="row special-list">
+				{% for cl in reserves %}
+				<a href="#">
+				   <div>
+					<div class="gallery-single fix">
+						<img src="{{cl.photo.url}}" width="200" height="200" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>{{cl.user.id}}</h4>
+							<p>{{cl.table.id}}</p>
+							<p>{{cl.start_time}}</p>
+							<p>{{cl.duration}}</p>
+						</div>
+					</div>
+				</div>
+
+				</a>
+				{% endfor %}
+
+			</div>
+		</div>
+
+
+
+</div>
+
+
+

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} food_list {% endblock %}
+
+{% block content%}
+
+<div class="row special-list">
+<ul>
+{% for food in food %}
+    <div class="col-lg-4 col-md-6 special-grid drinks">
+					<div class="gallery-single fix">
+                        <a href="{% url 'detail' food.id %}"> <li>{{food}}</li> </a>
+						<img src="{{food.photo.url}}" class="img-fluid" alt="Image" width="420" height="100">
+						<div class="why-text">
+							<h4>{{food.name}}</h4>
+							<p>{{food.description}}</p>
+							<h5> {{food.price}}</h5>
+						</div>
+					</div>
+				</div>
+	<!-- tag form of number and food_id with post request  -->
+{% endfor %}
+</ul>
+</div>
+
+{% endblock %}

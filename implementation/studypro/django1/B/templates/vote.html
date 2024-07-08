@@ -1,0 +1,42 @@
+{% include 'messages.html' %}
+<form action="" method="post">
+    {% csrf_token %}
+     <div class="row">
+         <div class="col-md-6">
+             <h3>Add to Cart</h3>
+             <div class="col-md-12">
+                 <div class="form-group">
+                     <input type="text" placeholder="Price_rate" id="price_rate" class="form-control" name="price_rate" required data-error="Please enter the rate you give to price">
+                     <div class="help-block with-errors"></div>
+                 </div>
+             </div>
+         </div>
+
+		 <div class="col-md-6">
+             <div class="col-md-12">
+                 <div class="form-group">
+                     <input type="text" placeholder="Behdasht_rate" id="behdasht_rate" class="form-control" name="behdasht_rate" required data-error="Please enter the rate you give to behdasht">
+                     <div class="help-block with-errors"></div>
+                 </div>
+             </div>
+         </div>
+
+		 <div class="col-md-6">
+             <div class="col-md-12">
+                 <div class="form-group">
+                     <input type="text" placeholder="service_rate" id="service_rate" class="form-control" name="service_rate" required data-error="Please enter the rate you give to service">
+                     <div class="help-block with-errors"></div>
+                 </div>
+             </div>
+         </div>
+
+         <div class="col-md-12">
+             <div class="submit-button text-center">
+                 <button class="btn btn-common" id="submit" type="submit">Vote</button>
+                 <div id="msgSubmit" class="h3 text-center hidden"></div>
+                 <div class="clearfix"></div>
+             </div>
+         </div>
+     </div>
+</form>
+

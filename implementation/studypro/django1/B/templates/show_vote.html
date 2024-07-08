@@ -1,0 +1,22 @@
+<div class="menu-box">
+		<div class="container">
+            <h2>Paid Items</h2>
+			<div class="row special-list">
+				{% for bl in bought_list %}
+				<a href="#">
+				   <div>
+					<div class="gallery-single fix">
+						<img src="{{bl.food.photo.url}}" width="200" height="200" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>{{bl.order_number}}</h4>
+							<a href="{% url 'vote' user.id bl.food.id %}">Vote</a>
+						</div>
+					</div>
+				</div>
+
+				</a>
+				{% endfor %}
+
+			</div>
+		</div>
+    </div>

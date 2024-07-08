@@ -1,0 +1,35 @@
+{% extends 'base1.html' %}
+{% block title%} detail {% endblock %}
+
+{% block content %}
+<img src="{{food.photo.url}}" width="20%" height="40%">
+<h3>{{food.description}}</h3>
+<p> {{food.price}} </p>
+<p> {{food.rate}} </p>
+<p> {{food.time}} </p>
+<p> {{food.pub_date}} </p>
+
+<form action="" method="post">
+    {% csrf_token %}
+     <div class="row">
+         <div class="col-md-6">
+             <h3>Add to Cart</h3>
+             <div class="col-md-12">
+                 <div class="form-group">
+                     <input type="text" placeholder="Numbar" id="number" class="form-control" name="number" required data-error="Please enter the Numbar of foods">
+                     <div class="help-block with-errors"></div>
+                 </div>
+             </div>
+         </div>
+         <div class="col-md-12">
+             <div class="submit-button text-center">
+                 <button class="btn btn-common" id="submit" type="submit">Add to Cart</button>
+                 <div id="msgSubmit" class="h3 text-center hidden"></div>
+                 <div class="clearfix"></div>
+             </div>
+         </div>
+     </div>
+</form>
+
+
+{% endblock %}

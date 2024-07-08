@@ -1,0 +1,53 @@
+
+
+<div class="menu-box">
+		<div class="container">
+            <h2>Paid Items</h2>
+			<div class="row special-list">
+				{% for bl in bought_list %}
+				<a href="#">
+				   <div>
+					<div class="gallery-single fix">
+						<img src="{{bl.food.photo.url}}" width="200" height="200" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>{{bl.order_number}}</h4>
+							<p>{{bl.created_at}}</p>
+							<p>{{bl.number}}</p>
+							<p>{{bl.total_price}}</p>
+							<a href="{% url 'cancle' user.id bl.order_number %}">Cancle</a>
+						</div>
+					</div>
+				</div>
+
+				</a>
+				{% endfor %}
+
+			</div>
+		</div>
+
+        <div class="container">
+            <h2>UnPaid Items</h2>
+			<div class="row special-list">
+				{% for cl in cart_list %}
+				<a href="#">
+				   <div>
+					<div class="gallery-single fix">
+						<img src="{{cl.food.photo.url}}" width="200" height="200" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>{{cl.id}}</h4>
+							<p>{{cl.created_at}}</p>
+							<p>{{cl.number}}</p>
+							<p>{{cl.total_price}}</p>
+						</div>
+					</div>
+				</div>
+
+				</a>
+				{% endfor %}
+
+			</div>
+		</div>
+	</div>
+
+
+

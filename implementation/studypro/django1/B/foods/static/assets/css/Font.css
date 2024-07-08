@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Vazir';
+    src: url('../font/iran/Vazir/Vazir.eot') format('eot');
+    src: url('../font/iran/Vazir/Vazir.ttf') format('ttf');
+    src: url('../font/iran/Vazir/Vazir.woff') format('woff');
+}
+@font-face {
+    font-family: 'Awesome';
+    src: url('../font/webfonts/fa-solid-900.ttf') format('ttf');
+    src: url('../font/webfonts/fa-solid-900.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'iranSans';
+    src: url('../font/iran/IRANSans/eot/IRANSansWeb.eot') format('eot');
+    src: url('../font/iran/IRANSans/ttf/IRANSansWeb.ttf') format('ttf');
+    src: url('../font/iran/IRANSans/woff/IRANSansWeb.woff') format('woff');
+}
+@font-face {
+    font-family: 'iranSans_Bold';
+    src: url('../font/iran/IRANSans/eot/IRANSansWeb_Bold.eot') format('eot');
+    src: url('../font/iran/IRANSans/ttf/IRANSansWeb_Bold.ttf') format('ttf');
+    src: url('../font/iran/IRANSans/woff/IRANSansWeb_Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'iranSans_Light';
+    src: url('../font/iran/IRANSans/eot/IRANSansWeb_Light.eot') format('eot');
+    src: url('../font/iran/IRANSans/ttf/IRANSansWeb_Light.ttf') format('ttf');
+    src: url('../font/iran/IRANSans/woff/IRANSansWeb_Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'iranSans_Medium';
+    src: url('../font/iran/IRANSans/eot/IRANSansWeb_Medium.eot') format('eot');
+    src: url('../font/iran/IRANSans/ttf/IRANSansWeb_Medium.ttf') format('ttf');
+    src: url('../font/iran/IRANSans/woff/IRANSansWeb_Medium.woff') format('woff');
+}
+*{
+    font-family: 'iranSans';
+}
+.f-irS{
+    font-family: 'iranSans';
+}
+.f-irS-b{
+    font-family: 'iranSans_Bold';
+}
+.f-irS-l{
+    font-family: 'iranSans_Light';
+}
+.f-irS-m{
+    font-family: 'iranSans_Medium';
+}
+.f-vazir{
+    font-family: 'Vazir';
+}

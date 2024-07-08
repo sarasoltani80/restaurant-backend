@@ -1,0 +1,196 @@
+*{
+    transition: transform 0.3s;
+}
+body.light{
+    background-image: url('../img/technologyBackgroundLight.jpg');
+    background-size: cover;
+    max-width: 100%;
+}
+body{
+    background-image: url('../img/technologyBackgroundDark2.jpg');
+    background-size: cover;
+    max-width: 100%;
+}
+/* Start Palettes colors */
+.bg-head{
+    background-color:var(--c-head) !important;
+}
+.c-useful{
+    color:var(--c-useful) !important;
+}
+:root{
+    --c-useful:#E4E4E4;
+    --c-head: #222222;
+    --c-shadow-box: #0a6280;
+}
+/* End Palettes colors */
+
+/* Start Custom User Login  */
+.cu-rounded{
+    border-radius: 30px;
+}
+.custom-shadow{
+    box-shadow: 0px 0px 10px var(--c-shadow-box);
+}
+.custom-shadow-text{
+    text-shadow: 0px 0px 5px var(--c-useful);
+}
+.input-parent{
+    border-bottom: 0.5px solid var(--c-useful) !important;
+    border-radius: 0 !important;
+}
+.inputfocus{ 
+    position:relative;
+    display:block;  
+}
+.inputfocus::before, 
+.inputfocus::after{
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    box-shadow: 0 0 10px var(--c-useful);
+    position:absolute;
+    background:var(--c-useful); 
+    transition:0.4s ease all; 
+    -moz-transition:0.4s ease all; 
+    -webkit-transition:0.4s ease all;
+}
+.inputfocus::before {
+    left:50%;
+}
+.inputfocus::after {
+    right:50%; 
+}
+.input-parent:focus ~ .inputfocus::before, .input-parent:focus ~ .inputfocus::after {
+    width:50%;
+}
+.input-parent:focus{
+    border: none !important;
+}
+.btn-custom-login{
+    color: var(--c-useful) !important;
+    border: 1px solid var(--c-useful);
+    transition: all 0.2s !important;
+}
+.btn-custom-login:hover,
+.btn-custom-login:focus,
+.btn-custom-login:active{
+    color: var(--c-head) !important;
+    border: 1px solid var(--c-useful) !important;
+    background-color: var(--c-useful) !important;
+    box-shadow: 0px 0px 10px var(--c-useful);
+}
+.filter-blur{
+    backdrop-filter: blur(4.5px) !important;
+}
+/* End Custom User Login */
+
+/* Start Custom Panel  */
+
+.btn-custom-panel{
+    color: var(--c-useful) !important;
+    border: 0;
+    border-bottom: 1px solid var(--c-useful);
+    transition: all 0.2s !important;
+}
+.active.btn-custom-panel i{
+    transform: rotate(90deg);
+}
+.active.btn-custom-panel{
+    color: #E4E4E4 !important;
+}
+.btn-custom-panel:hover{
+    color: var(--c-head) !important;
+    border-bottom: 1px solid var(--c-useful) !important;
+    background-color: var(--c-useful) !important;
+    box-shadow: 0px 0px 10px var(--c-useful);
+}
+.btn-custom-panel:focus,
+.btn-custom-panel:active{
+    box-shadow: none !important;
+}
+.btn-custom-panel:focus i,
+.btn-custom-panel:active i{
+    transform: rotate(90deg);
+}
+
+/* Start Side Bar */
+.side-bar{
+    transform: translate(100% , 0);
+    transition: transform 0.5s;
+    height:  calc(100vh - 79px);
+    top: 79px;
+}
+.side-bar-open.side-bar{
+    transform: translate(0 , 0);
+}
+#flage-sidebar{
+    cursor: pointer;
+}
+.main-content{
+    transition: width 0.3s;
+    transform: translate(0,79px);
+}
+span.dropdown-toggle::after{
+    vertical-align: 0 !important;
+}
+
+.cu-dropdown-h li:hover a {
+    color: var(--c-head) !important;
+}
+
+.cu-dropdown-h li:nth-child(2):hover,
+.cu-dropdown-h li:nth-child(3):hover{
+    box-shadow: 0px 0px 10px var(--c-useful) !important;
+    cursor: pointer;
+}
+.cu-dropdown-h li:nth-child(2):hover a,
+.cu-dropdown-h li:nth-child(3):hover a{
+    background-color: var(--c-useful) !important;
+}
+.form-control{
+    border-color: var(--c-useful);
+}
+.border-useful{
+    border-color: var(--c-useful) !important;
+}
+/* End Side Bar */
+
+/* Button Close */
+textarea{
+    resize: none;
+    height: 200px !important;
+}
+.z-index-1{
+    z-index: 10;
+}
+.z-index-2{
+    z-index: 2000;
+}
+.navbar,
+.navbar div{
+    transition: all 0.01s !important;
+}
+/* End Custom Panel  */
+
+/* Start Table */ 
+th{
+    text-align: start !important;
+    padding-right: 10px !important;
+}
+tr th:last-child ,
+tr td:last-child {
+    border-left: 1px solid var(--c-useful) !important;
+}
+/* End Table */
+
+/* Fixed AutoComplete */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-background-clip: text;
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: var(--c-useful) !important;
+}
